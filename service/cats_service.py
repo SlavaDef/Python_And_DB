@@ -62,7 +62,7 @@ def update_by_id(id, cat_name, cat_owner, cat_year):
     with UseDatabase(**db_config) as cursor:
         cursor.execute("UPDATE cat SET cat_name = %s, cat_owner = %s, cat_year = %s WHERE id = %s",
                        (cat_name, cat_owner, cat_year, id))
-        
+
 
 def update_owner_by_id(id, cat_owner):
     with UseDatabase(**db_config) as cursor:
